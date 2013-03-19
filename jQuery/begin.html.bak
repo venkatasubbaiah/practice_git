@@ -1,0 +1,146 @@
+<html>
+	<head>   
+		<script src = "jquery-1.9.1.js"></script>
+		
+		<script>		
+			/*$(document).ready(hidefun);
+			function hidefun(){			
+				$("body").hide(" Hello From JQuery ! ");
+			}
+			
+			function stylefun(){
+				$("body").attr("style","color:red")
+			}*/
+
+			/*$(document).ready(function(){
+				$("button").click(function(){
+					$("#para").hide();
+				});			
+			});	*/
+			/*$(document).ready(function(){
+				$("button").click(function(){
+					$(".paraclass").hide();
+				});
+			});*/
+			
+				/*
+				});*/
+				
+				$(document).ready(function(){
+					$("#fadein").click(function(){
+						 $("#div1").fadeIn("slow");
+						 $("#div2").fadeIn("fast");
+						 $("#div3").fadeIn(6000);
+						
+					});
+					$("#fadeout").click(function(){
+						 $("#div1").fadeOut(6000);
+						 $("#div2").fadeOut("slow");
+						 $("#div3").fadeOut("fast");
+						
+					});
+					$("#fadetoggle").click(function(){
+						 $("#div1").fadeToggle();
+						 $("#div2").fadeToggle();
+						 $("#div3").fadeToggle();
+						
+					});
+					$("#fadeto").click(function(){
+						 $("#div1").fadeTo("slow",0.1);
+						 $("#div2").fadeTo("slow",0.5);
+						 $("#div3").fadeTo("slow",0.9);
+						
+					});
+					$("#hide").click(function(){
+					$(".paraclass").toggle();
+					});
+					$("#dom").click(function(){
+						alert("The messang is "+$("#text").val());
+					});
+					$("#htm1").click(function(){
+						alert("The html content:"+$(".paraclass").html());
+					});
+					$("#htm2").click(function(){
+						alert("The text is :"+$(".paraclass").text());
+					});
+					$("#attr").click(function(){
+						alert("The arrtibute value is :"+$("#text").attr("type"));
+					});
+					
+					$("#oldnew").click(function(){
+						$(".own").text(function(i,orgText){
+							return " NEW TEXT : " + orgText + "  subbiaha index is :"+i;
+						});
+							
+					});
+
+					$("#oldhtml").click(function(){
+						$(".own2").html(function(i,orgText){
+							return " "+orgText + "  <h1>subbiaha index is :"+i+"</h1> ";
+						});
+							
+					});
+					$("#append").click(function(){
+						$("#pappend").append("venkat");
+						$("#olist").prepend("<li>new list Item</li>");	
+						$("olist").css("font-size" ,"200%");
+					});
+
+					$("#addcss").click(function(){
+							
+						$("#csspara").css({"font-size": "200%", "color":"red");
+					});
+					
+				});
+				
+			
+
+			
+		</script>
+	
+	 </head>
+			
+	<body>   
+			<p id="para">from id selector</p>	
+
+			<p class="paraclass">from class selector <b>BOLD</b> .</p>
+			
+
+
+			
+			<button id="hide">Toggle !</button>
+			
+			<button id="fadein">Fade In !</button>
+			<button id="fadeout">Fade Out!</button>
+			<button id ="fadetoggle">Fade Toggle</button>
+			<button id ="fadeto">Fade To !</button>
+
+			<div id="div1" style="width:80px;height:80px;background-color:red;"><br></div>
+			<div id="div2" style="width:80px;height:80px;background-color:green;"></div>
+			<div id="div3" style="width:80px;height:80px;background-color:yellow;"></div>				
+			
+			<input type ="text" id ="text"/>
+			<button id ="dom">DOM EXAMPLE</button>
+			<button id ="htm1">HTML</button>
+			<button id ="htm2">Text</button><br/>
+			<button id ="attr">Attribute</button>
+			<p class="own">venkat</p>
+			<p class="own2">venkat</p>
+			<button id ="oldnew">OLD & NEW </button>
+			<button id ="oldhtml">OLD & NEW HTML</button>
+			<p id="pappend">vennkat </p>
+			
+			<ol id="olist">
+				<li>Banana</li>
+				<li>Apple</li>
+				<li>Mango</li>
+			</ol>
+
+			<button id="append">append</button>
+			
+			<p id ="csspara">venkat</p>
+			<button id="addcss">append</button>
+			
+
+	</body>
+</html>
