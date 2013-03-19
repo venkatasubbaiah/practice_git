@@ -1,0 +1,50 @@
+
+body{
+
+	background:yellow url('test.png') no-repeat right center;
+}
+
+a:link{color:blue;}
+a:visited{color:red;}
+a:hover{color:pink;}
+a:active{color:black;}
+
+a.one:link{color:blue;}
+a.one:visited{color:red;}
+a.one:hover{font-size:30px;background:black;}
+a.one:active{color:black;}
+
+a.box:link{
+	display:block;
+	color:#8999	
+	background-color:white;	
+	padding:4px;
+	width:120px;
+	
+}
+
+
+a:link,a:visited
+{
+display:block;
+font-weight:bold;
+color:#FFFFFF;
+background-color:black;
+width:120px;
+text-align:center;
+padding:4px;
+text-decoration:none;
+}
+
+a:hover
+{
+display:block;
+font-size:30%;
+color:#FFFFFF;
+background-color:#98bf21;
+width:120px;
+text-align:center;
+padding:4px;
+text-decoration:none;
+}
+
