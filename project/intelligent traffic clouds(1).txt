@@ -1,0 +1,270 @@
+ Cloud Computing for Agent-Based Urban Transportation Systems
+ ************************************************************
+
+Domain: intelligent systems
+
+parallel and distributed computing: inelastic cloud 
+
+=> fixed servers
+
+=> fixed storage 
+
+=>
+
+ 
+    clients                 mainserver       subservers 
+
+                                                8 :200
+
+    1200                       1200              1600
+
+
+    2000                       2000              1600
+case 1: 1200 :1600:8 subservers:2 servers :resources:wastage
+
+case 2: we are not control the traffic
+
+=>there is no analysis
+
+=>there is no decision support system 
+
+=>it is not possible for increase the number of servers 
+
+=>inelastic cloud: hardware components + software components 
+
+disadvantages:
+
+1. limited number of requests
+
+2. homogenous requests 
+
+3. limited scalability, limited performance 
+
+4. users not satisfied 
+
+
+parallel and distributed computing + cloud :elastic cloud
+**********************************************************
+
+1.cloud computing: on demand network
+
+2. number of requests are increases , number of servers also it is increases
+
+3.database
+
+4.some of the requests generate: count the number of requests or learn the number of requests: estimation of servers creation
+
+ =>changes the number of requests creation :new requests: learn:count : estimation of servers 
+
+=>adaptability :changes the servers design based on the number of requests
+
+=>example: 1000  = 5 
+
+           2000  = 10 
+ 
+5.
+    =>in first agent or server: allocate the requests are 1000
+
+=>first agent accept the number of requests are 200 : agent distribution 
+
+
+6. transport the number of requests: remaining 800 number of requests allocate into another server or agent
+
+  =>mobility : agent transportation        
+
+7. agent transportation process applies till total number of requests allocation
+
+  =>autonomy : framework or organization of different servers or agents 
+
+
+8. prototype design 
+
+9. decision support system : design 
+
+10.intelligent traffic clouds
+
+advantages
+**********
+
+1. unlimited number of requests
+
+2. high scalability 
+
+3. saving the resources: provide the services with low cost 
+
+4. large amount of traffic 
+
+5. dynamic traffic control system
+
+6. multi agent technology 
+
+history of traffic control system:
+**********************************
+
+1. IBM: main frames :
+
+ detector technology :traffic lights
+
+:computarized system: operations: fixed : fixed time
+
+=>cycle operations 
+
+=>single location
+
+=>centralized model 
+
+=>in any one of the direction : high traffic: delay the more number of vehicles: heavy traffic: accidents 
+
+=>costly 
+
+
+2. large scale integrated circuits
+
+=>now i have the first server
+
+=>allocate the number of tasks into first server
+
+=>one intersection
+
+=>in two number of locations only we are control the traffic 
+
+=>handle the extra traffic compare to first traffic control system
+
+
+3. hierachical traffic control system
+
+=>three components 
+
+=>organizer: collection of requests from different number of locations
+
+=>coordinator: divide the number of requests and allocate the requests in coordinator
+
+=>coordinator requests information store into executor
+
+=>3 layers or 3 levels
+
+=>exchanges the resources: high 
+
+4. parallel and distributed
+
+=>case 1: wastage
+
+  case 2: limited traffic 
+
+5. cloud computing: improve the performance mechanism
+
+characterstics:
+
+1. cloud computing: infrastructure : heterogenous 
+
+2. two transportation systems:actual transportation system ( static agents ) +artificial transportation system (dynamic agents) 
+
+3. two transportation systems are interacted 
+
+advantages:
+
+1. enhance the performance
+
+2. minimize the hardware components
+
+ 
+architecture:
+*************
+
+=> 4 modules description
+
+1. agent training and testing module
+
+2. agent generation and storage module
+
+3. agent deployment and support module
+
+4. ATS (traffic strategies ) : organization layer 
+
+agent training and testing module:
+**********************************
+
+=>traffic data , traffic scenes
+
+=>traffic data and traffic scenes allocate into agent or server 
+
+=>before generate the traffic how many number of requests are possible to execute in single server or single agent 
+
+example: 1000 requests: allocate into agent:1000: 250 :251:traffic : agent performance 
+
+=>agent performance information forward to traffic strategy developers 
+
+agent generation and storage module:
+************************************
+
+=>check the traffic strategy database 
+
+=>count the number of requests into traffic strategy database
+
+=>based on count using agent performance generate the agents 
+
+=>sufficient agents of information in implementation 
+
+agent deployment and support module:
+************************************
+
+=>agent performance :allocation of tasks or jobs or requests 
+
+=>in first agent: agent distribution 
+
+=>first it is sufficient: allocate the remaining number of requests into another agent: supporting agents 
+
+=>agent transportation: from one agent to another agent
+
+=>static agents are not handle the traffic
+
+=>we need to require the new agents of information 
+
+ATS:
+****
+
+=>we are create the dynamic agents of information 
+
+=>new agents + existing agents(static agents): interaction : optimal solution 
+
+
+implementation steps :
+**********************
+
+=>1. static agents: remaining traffic provides to traffic signal controller
+
+  2. decision: dynamic agents 
+
+
+step2: organization layer:4 processes
+
+   1.agent oriented decomposition
+
+   2.agent scheduling
+
+   3.agent traffic strategy 
+
+   4.agent management 
+
+step3: traffic strategies: guidence ,control the traffic : traffic management 
+
+step4: any number of requests are generate: saving the traffic strategy database traffic 
+
+step5: increases the traffic ;ATS: new agents : large amount of traffic also we are save 
+
+step6: it is gives the good performance environment
+
+step7: present databases are intelligent databases 
+
+step8: we are uses the two functions of information: agent oriented decomposition, agent scheduling : some number of agents:traffic :remaining traffic: forward to organization layer(traffic managers) 
+
+=>previous agents : new agents:urban transportation system 
+
+=>it is not control the traffic of information 
+
+step9: this new agents: we are create with ATS
+
+step10: improve the control the traffic
+
+step11: faster manner 
+
