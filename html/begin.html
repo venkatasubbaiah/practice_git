@@ -1,0 +1,231 @@
+<html>
+	<head>
+		<script language="javascript">
+			function call(){
+				var  input = document.getElementById("demo");
+				input.value="After Click";
+			}
+			function newpage(){
+				document.write("<h1> from new\
+				Page</h1>");
+			}
+			function add(){
+				var a = document.getElementById("first").value;
+				var b = document.getElementById("second").value;
+				var c = parseInt(a) + parseInt(b);
+				document.getElementById("result").value = c; 
+				document.getElementById('first').value = "";
+				document.getElementById('second').value = "";
+				
+				
+			}
+			function array(){
+				/*
+				var cars = new Array();
+				cars[0] = "volvo";
+				cars[1] = "benz";
+				cars[2] = "ford"
+				*/
+				var cars = new Array("volvo","benz","ford");
+//				var cars = ["volvo","benz","ford"];
+				//for(var i=0;i<cars.length;i++)
+				//for(i in cars)
+				var i=0;
+				var len =cars.length;
+				while(i<cars.length){
+					document.write(cars[i]+"<br>");
+					i++;
+				}
+			}
+			function object(){
+				var i;
+				var text ="";
+				var car = {
+					name : "volvo",
+					color : "red",
+					number : 1234,
+					noofwheels : 16
+				};
+				
+				for( i in car){
+					text = text + car[i]+"  ";
+					}
+				document.getElementById("main").innerHTML = text;
+				//alert("The car name is " +car["name"] + " and it's color is " +car.color +"The car number is " +car["number"] + " and it has " +car.noofwheels +" wheels");
+				
+			}
+			function vote(){
+				
+				age = document.getElementById("age").value;
+				var votable = (age<18)? "Not eligible for vote " :" you are eligible forVote"; 
+				document.getElementById("main").innerHTML = votable;
+			}
+			function greeting(){
+				try{
+					var hours = new Date().getHours();
+					var greet="";
+				
+					if(hours<11){
+						greet ="Good Morning !";
+					}
+					else if(hours < 20){
+						greet =" Good Eveing !";
+					}
+					else {
+						greet = "Good Night !";
+					}
+				}
+				catch(error){
+					alert("The error description is "+error.message);
+				}
+				
+				document.getElementById("main").innerHTML = greet;
+			}
+			function findday(){
+				var dayno = new Date().getDay();
+				var day="";
+				switch(dayno){
+					case 0:
+						day = " sunday !" ;
+						break;
+					case 1:
+						day = " Monday !" ;
+						break;
+					case 2:
+						day = " Tuesday !" ;
+						break;
+					case 3:
+						day = " wWdnesday !" ;
+						break;
+					case 4:
+						day = " Thusday !" ;
+						break;
+					case 5:
+						day = " Friday !" ;
+						break;
+					case 6:
+						day = " Saturday !" ;
+						break;
+					default :
+						day = " Not found";
+
+				}
+				document.getElementById("main").innerHTML = "To day is a" +day;
+				
+			}
+			function validate(){
+				try{
+					var v = document.getElementById("integer").value;
+					if(v == "")
+						throw "Null Error";
+					if(v<=10)
+						throw "Small number ";
+					if(v>=100)
+						throw "big number ";
+					if(isNaN(v))
+						throw "Not a number";
+					
+				}
+				catch(error){
+					document.getElementById("new").innerHTML = error;
+				}
+				
+			}
+			function num(){
+				var n = new Number();
+				n=256.967;
+				
+				document.write(n.MAX_VALUE);
+				document.write("<br/>"+n.valueOf()+1);
+				document.write("<br/>"+n.toString());
+				document.write("<br/>"+n.toExponential());
+				document.write("<br/>"+n.toFixed());
+				document.write("<br/>"+n.toPrecision());
+			
+			}
+			function stringoperation(){
+				
+				try
+				{
+					
+					var test = document.getElementById("strbeforeclick").innerHTML;
+					//document.getElementById("strafterclick").innerHTML = test.toUpperCase();
+					//document.getElementById("strafterclick").innerHTML = test.indexOf("object");
+					//document.getElementById("strafterclick").innerHTML = test.match("in");
+					//document.getElementById("strafterclick").innerHTML = test.replace("object","OBJECT");
+					
+			 
+					//document.getElementById("strafterclick").innerHTML = test.split(" ");
+
+					//document.getElementById("strafterclick").innerHTML=test.slice(0,7);
+
+				//	document.getElementById("strafterclick").innerHTML=test.substring(7);
+					//document.getElementById("strafterclick").innerHTML=test.substring(0,7);
+					//document.getElementById("strafterclick").innerHTML=test.substr(7);
+					document.getElementById("strafterclick").innerHTML=test.substring(0,7);
+
+					
+				}
+				catch (err)
+				{
+					alert(err);
+				}		
+
+			}
+			function myTime(){
+					var today = new Date();
+					var h = today.getHours();
+					var m = today.getMinutes();
+					var s = today.getSeconds();
+					if( h >= 12)
+						h = h-12;
+					document.getElementById("main").innerHTML = h +" : "+ m + " : "+ s;
+					t = setTimeout(function(){myTime()},500);
+			}
+			</script>
+
+			<style type ="text/css">
+				#main{
+					display:block;
+					padding-left:5px;
+					float:right;
+					width:200px;
+					background-color:yellow;
+					color:red;
+					font-size:300%;
+					border:2px double green;
+
+
+			</style>
+	
+	</head>
+	<body onload="myTime()">
+		<p id = "main">Before button Click !</p>
+		<input type="button"  id = "demo" value="Click Me!" onclick="call()"/>
+
+		<input type="button"  value="Click for new Page !" onclick="newpage()"/><br/><br/>
+		First Number<input type ="text" id="first" /><br/>
+		Second Number<input type ="text" id="second" /><br/>
+		 <input type="button" value ="Sum !" onclick="add()"/><br/>
+		<input type ="text" id="result" /><br/>
+		<input type = "button" value = "Array" onclick="array()">
+		<input type = "button" value =  "Object" onclick = "object()"><br/>
+
+		Enter Age <input type ="text" id="age" /><br/>
+
+		<input type = "button" value =  "Check for Vote" onclick = "vote()"><br/>
+
+		<input type = "button" value =  "Greetings !" onclick = "greeting()"><br/>
+
+		<input type = "button" value =  "Get Day !" onclick = "findday()"><br/>
+	
+		Enter a  Number<input type ="text" id="integer" /><br/>
+		<input type = "button" value =  "Validate !" onclick = "validate()"><br/>
+		<p id ="new">   </p>
+		<input type = "button" value =  "number !" onclick = "num()"><br/>
+
+		<p id ="strbeforeclick">This is small example for string object in javascript  </p>
+		<input type = "button" value =  "String !" onclick = "stringoperation()"><br/>
+		<p id ="strafterclick">
+	</body>
+</html>
